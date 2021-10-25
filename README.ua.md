@@ -1,4 +1,5 @@
-# goit-js-hw-06
+**Read in other languages: [Русский](README.md), [Українська](README.ua.md),
+[English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
 # Критерії приймання
 
@@ -81,18 +82,18 @@ JavaScript містить масив рядків.
 
 ```js
 const ingredients = [
-  "Potatoes",
-  "Mushrooms",
-  "Garlic",
-  "Tomatos",
-  "Herbs",
-  "Condiments",
+  'Potatoes',
+  'Mushrooms',
+  'Garlic',
+  'Tomatos',
+  'Herbs',
+  'Condiments',
 ];
 ```
 
 Напиши скрипт, який для кожного елемента масиву `ingredients`:
 
-1. Створить окремий елемент `<li>`. Обов'язково використовуй метод `document.createElement()`.
+1. Створить окремий елемент `<li>`. Обов'язково використовуй метод  `document.createElement()`.
 2. Додасть назву інгредієнта як його текстовий вміст.
 3. Додасть елементу клас `item`.
 4. Після чого, вставить усі `<li>` за одну операцію у список `ul.ingredients`.
@@ -114,16 +115,16 @@ const ingredients = [
 ```js
 const images = [
   {
-    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
-    alt: "White and Black Long Fur Cat",
+    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
+    alt: 'White and Black Long Fur Cat',
   },
   {
-    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
-    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
   },
   {
-    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
-    alt: "Group of Horses Running",
+    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260',
+    alt: 'Group of Horses Running',
   },
 ];
 ```
@@ -219,11 +220,11 @@ const images = [
 2. Під час відправлення форми сторінка не повинна перезавантажуватися.
 3. Якщо у формі є незаповнені поля, виводь `alert` з попередженням про те, що всі поля повинні бути заповнені.
 4. Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт, де ім'я поля буде ім'ям властивості, а значення поля - значенням властивості. Для доступу до елементів форми використовуй властивість `elements`.
-5. Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом `reset`.
+5.  Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом `reset`.
 
 ## Завдання 9
 
-Напиши скрипт, який змінює кольори фону елемента `<body>` через інлайн-стиль по кліку на `button.change-color` і виводить значення кольору в `span.color`.
+Напиши скрипт, який змінює кольори фону елемента `<body>` через інлайн-стиль  по кліку на `button.change-color` і виводить значення кольору в `span.color`.
 
 ```html
 <div class="widget">
