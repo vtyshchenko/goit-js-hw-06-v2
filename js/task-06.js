@@ -5,16 +5,14 @@ inputRef.addEventListener("blur", onBlur);
 
 function onBlur(event) {
   if (event.target.value !== "") {
-    if (
+    const className =
       event.target.value.length ===
       Number(event.target.attributes["data-length"].value)
-    ) {
-      event.target.classList.add("valid");
-      event.target.classList.remove("invalid");
-    } else {
-      event.target.classList.remove("valid");
-      event.target.classList.add("invalid");
-    }
+        ? "valid"
+        : "invalid";
+    event.target.classList.remove("valid");
+    event.target.classList.remove("invalid");
+    event.target.classList.add(className);
   } else {
     event.target.classList.remove("valid");
     event.target.classList.remove("invalid");
