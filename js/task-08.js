@@ -14,13 +14,11 @@ function onSubmit(e) {
   }
 
   const data = {};
-  [...e.currentTarget.elements].forEach(setData);
-
-  function setData(elem) {
+  [...e.currentTarget.elements].forEach((elem) => {
     if (elem.nodeName === "INPUT") {
       data[elem.attributes.name.value] = elem.value;
     }
-  }
+  });
 
   console.log(data);
   e.currentTarget.reset();
