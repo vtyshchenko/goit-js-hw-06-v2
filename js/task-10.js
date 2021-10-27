@@ -7,11 +7,14 @@ const controlsRef = document.querySelector("#controls");
 
 controlsRef.addEventListener("click", onButtonClick);
 
-function onButtonClick(e) {
-  const actions = [...Array.from(e.target.attributes, ({ name }) => name)];
+function onButtonClick({ target: { attributes, parentElement } }) {
+  // function onButtonClick(e) {
+  // const actions = Array.from(e.target.attributes, ({ name }) => name);
+  const actions = Array.from(attributes, ({ name }) => name);
   if (actions.includes("data-create")) {
-    const inputCount = getInput(e.target.parentElement);
-    if (inputCount !== null) {
+    // const inputCount = getInput(e.target.parentElement);
+    const inputCount = getInput(parentElement);
+    if (inputCount) {
       createBoxes(Number(inputCount.value));
     }
   } else if (actions.includes("data-destroy")) {
@@ -23,17 +26,20 @@ function createBoxes(amount) {
   const divs = [];
   let len = 30;
   for (let i = 0; i < amount; i += 1) {
-    const div = document.createElement("div");
+    //чтобы писать декларативный код используйте шаблоные
+    // строки вместо createElement
+    // const div = document.createElement("div");
+
+    // div.style.width = `${len}px`;
+    // div.style.height = `${len}px`;
+    // div.style.backgroundColor = `${colorValue}`;
     const colorValue = getRandomHexColor();
 
-    div.style.width = `${len}px`;
-    div.style.height = `${len}px`;
-    div.style.backgroundColor = `${colorValue}`;
+    const div = `<div style="width: ${len}px; height: ${len}px; background-color: ${colorValue}"></div>`;
     divs.push(div);
-
     len += 10;
   }
-  boxesRef.append(...divs);
+  boxesRef.innerHTML = divs;
 }
 
 function destroyBoxes() {
